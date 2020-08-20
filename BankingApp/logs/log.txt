@@ -1,0 +1,56 @@
+2020-08-19 18:56:41 INFO  UserService:35 - Failed to register new user.
+2020-08-19 18:59:16 INFO  UserService:35 - Failed to register new user.
+2020-08-19 19:25:10 INFO  UserService:35 - Failed to register new user.
+2020-08-19 19:29:07 INFO  UserService:35 - Failed to register new user.
+2020-08-19 19:38:29 INFO  UserService:35 - Failed to register new user.
+2020-08-19 19:44:38 INFO  UserService:35 - Failed to register new user.
+2020-08-19 19:54:57 INFO  UserService:41 - Failed to register new user.
+2020-08-19 19:55:39 INFO  UserService:41 - Failed to register new user.
+2020-08-19 20:00:48 INFO  UserService:41 - Failed to register new user.
+2020-08-19 21:01:57 INFO  UserService:41 - Failed to register new user.
+2020-08-19 21:24:25 INFO  UserService:42 - Failed to register new user.
+2020-08-19 21:28:02 INFO  UserService:42 - Failed to register new user.
+2020-08-19 21:41:22 INFO  UserService:42 - Failed to register new user.
+2020-08-19 21:41:58 INFO  UserService:42 - Failed to register new user.
+2020-08-19 21:43:46 INFO  UserService:42 - Failed to register new user.
+2020-08-19 21:45:45 INFO  UserService:42 - Failed to register new user.
+2020-08-19 21:51:58 INFO  UserService:44 - Failed to register new user.
+2020-08-19 21:53:48 INFO  UserService:44 - Failed to register new user.
+2020-08-19 21:55:18 INFO  UserService:44 - Failed to register new user.
+2020-08-19 22:16:29 INFO  UserService:42 - Failed to register new user.
+2020-08-19 22:22:04 INFO  UserService:42 - Failed to register new user.
+2020-08-19 22:25:44 INFO  UserService:32 - Login failed.
+2020-08-19 22:25:44 INFO  UserService:42 - Failed to register new user.
+2020-08-19 22:26:00 INFO  UserService:32 - Login failed.
+2020-08-19 22:26:00 INFO  UserService:42 - Failed to register new user.
+2020-08-19 22:35:59 INFO  UserService:32 - Login failed.
+2020-08-19 22:35:59 INFO  UserService:42 - Failed to register new user.
+2020-08-19 22:41:22 INFO  UserService:32 - Login failed.
+2020-08-19 22:41:22 INFO  UserService:42 - Failed to register new user.
+2020-08-19 22:52:09 INFO  UserService:32 - Login failed.
+2020-08-19 22:52:09 INFO  UserService:42 - Failed to register new user.
+2020-08-19 22:55:22 INFO  UserService:32 - Login failed.
+2020-08-19 22:55:22 INFO  UserService:42 - Failed to register new user.
+2020-08-19 22:55:48 INFO  UserService:32 - Login failed.
+2020-08-19 22:56:10 INFO  UserService:32 - Login failed.
+2020-08-19 22:58:07 INFO  UserService:32 - Login failed.
+2020-08-19 22:58:40 INFO  UserService:32 - Login failed.
+2020-08-19 22:59:06 INFO  UserService:32 - Login failed.
+2020-08-19 22:59:06 INFO  UserService:42 - Failed to register new user.
+2020-08-19 22:59:19 INFO  UserService:32 - Login failed.
+2020-08-19 22:59:19 INFO  UserService:42 - Failed to register new user.
+2020-08-19 23:00:03 INFO  UserService:32 - Login failed.
+2020-08-19 23:00:03 INFO  UserService:42 - Failed to register new user.
+2020-08-19 23:05:18 INFO  UserService:32 - Login failed.
+2020-08-19 23:05:43 INFO  UserService:32 - Login failed.
+2020-08-19 23:06:31 INFO  UserService:32 - Login failed.
+2020-08-19 23:07:32 INFO  UserService:32 - Login failed.
+2020-08-19 23:13:35 INFO  UserService:32 - Login failed.
+2020-08-19 23:16:11 INFO  UserService:32 - Login failed.
+2020-08-20 12:45:53 INFO  UserService:32 - Login failed.
+2020-08-20 12:52:53 INFO  UserService:32 - Login failed.
+2020-08-20 13:53:52 INFO  UserService:32 - Login failed.
+2020-08-20 13:57:14 INFO  UserService:32 - Login failed.
+2020-08-20 18:11:22 INFO  BankDriver:16 - Application has started.
+2020-08-20 18:18:38 INFO  BankDriver:16 - Application has started.
+2020-08-20 18:34:58 INFO  BankDriver:16 - Application has started.
