@@ -1,3 +1,7 @@
 # add files here
 /.metadata/
-/target/
+target/
+bin/
+*.classpath
+*.project
+*.settings
