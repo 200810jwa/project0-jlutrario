@@ -50,7 +50,7 @@ public class AccountDAO implements IAccountDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO RETRIEVE ALL USERS");
+			System.out.println("FAILED TO RETRIEVE ALL ACCOUNTS");
 			return null;
 		}
 		

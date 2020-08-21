@@ -54,3 +54,7 @@
 2020-08-20 18:11:22 INFO  BankDriver:16 - Application has started.
 2020-08-20 18:18:38 INFO  BankDriver:16 - Application has started.
 2020-08-20 18:34:58 INFO  BankDriver:16 - Application has started.
+2020-08-20 20:34:15 INFO  BankDriver:16 - Application has started.
+2020-08-20 20:35:07 INFO  BankDriver:16 - Application has started.
+2020-08-20 20:38:22 INFO  BankDriver:16 - Application has started.
+2020-08-20 20:38:55 INFO  UserService:42 - Failed to register new user.
