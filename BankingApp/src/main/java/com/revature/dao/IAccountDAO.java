@@ -10,5 +10,5 @@ public interface IAccountDAO {
 	public Account findById(int id);
 	public int insert (Account a);
 	public boolean update(Account a);
-	public boolean delete(Account a);
+	public boolean delete(int id);
 }

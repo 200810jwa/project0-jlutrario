@@ -59,8 +59,32 @@ public class AccountDAO implements IAccountDAO {
 
 	@Override
 	public Account findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Account a = null;
+		
+		try (Connection conn = ConnectionUtilities.getConnection()){
+			
+			String sql = "SELECT * FROM project0.accounts WHERE project0.accounts.id = ?";
+			
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			
+			stmt.setInt(1, id);
+			
+			ResultSet rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				a = new Account();
+				
+				a.setId(rs.getInt("id"));
+				a.setBalance(rs.getDouble("balance"));
+				a.setOwner(userDAO.findByID(rs.getInt("owner")));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("FAILED TO RETRIEVE ACCOUNT");
+			return null;
+		}
+		
+		return a;
 	}
 
 	@Override
@@ -93,13 +117,45 @@ public class AccountDAO implements IAccountDAO {
 
 	@Override
 	public boolean update(Account a) {
-		// TODO Auto-generated method stub
+		try (Connection conn = ConnectionUtilities.getConnection()) {
+			
+			String sql = "UPDATE project0.accounts SET balance = ?, owner = ? WHERE project0.accounts.id = ?";
+			
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			
+			stmt.setDouble(1, a.getBalance());
+			stmt.setInt(2, a.getOwner().getId());
+			stmt.setInt(3, a.getId());
+			
+			if (stmt.executeUpdate(sql) != 0) {
+				return true;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("FAILED TO UPDATE USER");
+		}
 		return false;
 	}
 
 	@Override
-	public boolean delete(Account a) {
-		// TODO Auto-generated method stub
+	public boolean delete(int id) {
+		try (Connection conn = ConnectionUtilities.getConnection()) {
+			
+			String sql = "DELETE project0.accounts WHERE project0.accounts.id = ?";
+			
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			
+			stmt.setInt(1, id);
+			
+			if (stmt.executeUpdate(sql) != 0) {
+				return true;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("FAILED TO DELETE USER");
+		}
 		return false;
 	}
 	
