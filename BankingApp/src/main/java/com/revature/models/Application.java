@@ -1,5 +1,7 @@
 package com.revature.models;
 
+import com.revature.excepitons.MissingApplicationOwnerException;
+
 public class Application {
 
 	private int id;
@@ -14,6 +16,9 @@ public class Application {
 	public Application(int id, User owner, boolean active) {
 		super();
 		this.id = id;
+		if (owner == null) {
+			throw new MissingApplicationOwnerException();
+		}
 		this.owner = owner;
 		this.active = active;
 	}
