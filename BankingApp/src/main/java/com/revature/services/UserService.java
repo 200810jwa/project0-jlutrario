@@ -63,4 +63,9 @@ public class UserService {
 		return userDAO.update(u);
 	}
 	
+	public boolean deleteUser(User u) {
+		int id = u.getId();
+		return userDAO.delete(id);
+	}
+	
 }
