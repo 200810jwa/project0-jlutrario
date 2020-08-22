@@ -58,3 +58,248 @@
 2020-08-20 20:35:07 INFO  BankDriver:16 - Application has started.
 2020-08-20 20:38:22 INFO  BankDriver:16 - Application has started.
 2020-08-20 20:38:55 INFO  UserService:42 - Failed to register new user.
+2020-08-21 13:54:17 INFO  AccountService:35 - Failed to withdraw from account.
+2020-08-21 14:13:52 INFO  AccountService:51 - Failed to deposit to account.
+2020-08-21 14:13:52 INFO  AccountService:38 - Failed to withdraw from account.
+2020-08-21 14:21:33 INFO  AccountService:51 - Failed to deposit to account.
+2020-08-21 14:21:33 INFO  AccountService:38 - Failed to withdraw from account.
+2020-08-21 14:51:28 INFO  AccountService:36 - Successful withdraw from account.
+2020-08-21 14:51:28 INFO  AccountService:53 - Failed to deposit to account.
+2020-08-21 14:51:28 INFO  AccountService:66 - Failed to transfer funds.
+2020-08-21 14:51:28 INFO  AccountService:36 - Successful withdraw from account.
+2020-08-21 14:51:28 INFO  AccountService:50 - Successful deposit to account.
+2020-08-21 14:51:28 INFO  AccountService:63 - Successful transfer of funds.
+2020-08-21 14:51:28 INFO  AccountService:39 - Failed to withdraw from account.
+2020-08-21 14:51:28 INFO  AccountService:66 - Failed to transfer funds.
+2020-08-21 14:51:28 INFO  AccountService:50 - Successful deposit to account.
+2020-08-21 15:09:22 INFO  AccountService:33 - Failed to open new account.
+2020-08-21 15:09:22 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:09:22 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 15:09:22 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:09:22 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:09:22 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:09:22 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 15:09:22 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 15:09:22 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:09:22 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:12:58 INFO  AccountService:33 - Failed to open new account.
+2020-08-21 15:12:58 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:12:58 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 15:12:58 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:12:58 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:12:58 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:12:58 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 15:12:58 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 15:12:58 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:12:58 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:13:42 INFO  AccountService:33 - Failed to open new account.
+2020-08-21 15:13:42 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:13:42 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 15:13:42 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:13:42 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:13:42 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:13:42 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 15:13:42 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 15:13:42 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:13:42 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:14:13 INFO  AccountService:33 - Failed to open new account.
+2020-08-21 15:14:13 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:14:13 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 15:14:13 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:14:13 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:14:13 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:14:13 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 15:14:13 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 15:14:13 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:14:13 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:20:33 INFO  AccountService:33 - Failed to open new account.
+2020-08-21 15:20:33 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:20:33 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 15:20:33 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:20:33 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:20:33 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:20:33 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 15:20:33 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 15:20:33 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:20:33 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:20:47 INFO  AccountService:33 - Failed to open new account.
+2020-08-21 15:20:47 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:20:47 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 15:20:47 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:20:47 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:20:47 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:20:47 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 15:20:47 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 15:20:47 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:20:47 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:22:03 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:22:03 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 15:22:03 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:22:03 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:22:03 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:22:03 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 15:22:03 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 15:22:03 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:22:03 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:23:20 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:23:20 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 15:23:20 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:23:20 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:23:20 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:23:20 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 15:23:20 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 15:23:20 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:23:20 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:23:35 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:23:35 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 15:23:35 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:23:35 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:23:35 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:23:35 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 15:23:35 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 15:23:35 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:23:35 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:24:15 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:24:15 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 15:24:15 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:24:15 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:24:15 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:24:15 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 15:24:15 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 15:24:15 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:24:15 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:24:29 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:24:29 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 15:24:29 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:24:29 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:24:29 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:24:29 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 15:24:29 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 15:24:29 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:24:29 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:25:21 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:25:21 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 15:25:21 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:25:21 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:25:21 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:25:21 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 15:25:21 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 15:25:21 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:25:21 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:35:04 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:35:04 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 15:35:04 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:35:04 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 15:35:04 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:35:04 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 15:35:04 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 15:35:04 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 15:35:04 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 15:48:34 INFO  UserService:32 - Login attempt failed.
+2020-08-21 15:49:20 INFO  UserService:32 - Login attempt failed.
+2020-08-21 15:49:37 INFO  UserService:32 - Login attempt failed.
+2020-08-21 15:53:04 INFO  UserService:32 - Login attempt failed.
+2020-08-21 15:53:04 INFO  AccountService:33 - Failed to open new account.
+2020-08-21 15:56:15 INFO  UserService:32 - Login attempt failed.
+2020-08-21 15:56:15 INFO  AccountService:33 - Failed to open new account.
+2020-08-21 16:01:24 INFO  UserService:32 - Login attempt failed.
+2020-08-21 16:01:24 INFO  AccountService:33 - Failed to open new account.
+2020-08-21 16:04:56 INFO  UserService:32 - Login attempt failed.
+2020-08-21 16:05:13 INFO  UserService:32 - Login attempt failed.
+2020-08-21 16:05:13 INFO  AccountService:33 - Failed to open new account.
+2020-08-21 16:05:51 INFO  UserService:32 - Login attempt failed.
+2020-08-21 16:05:51 INFO  AccountService:33 - Failed to open new account.
+2020-08-21 16:06:49 INFO  UserService:32 - Login attempt failed.
+2020-08-21 16:06:49 INFO  AccountService:33 - Failed to open new account.
+2020-08-21 16:09:11 INFO  UserService:32 - Login attempt failed.
+2020-08-21 16:09:11 INFO  AccountService:33 - Failed to open new account.
+2020-08-21 16:10:16 INFO  UserService:32 - Login attempt failed.
+2020-08-21 16:15:12 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 16:15:12 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 16:15:12 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 16:15:12 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 16:15:12 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 16:15:12 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 16:15:12 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 16:15:12 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 16:15:12 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 16:17:39 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 16:17:39 INFO  AccountService:64 - Failed to deposit to account.
+2020-08-21 16:17:39 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 16:17:39 INFO  AccountService:47 - Successful withdraw from account.
+2020-08-21 16:17:39 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 16:17:39 INFO  AccountService:74 - Successful transfer of funds.
+2020-08-21 16:17:39 INFO  AccountService:50 - Failed to withdraw from account.
+2020-08-21 16:17:39 INFO  AccountService:77 - Failed to transfer funds.
+2020-08-21 16:17:39 INFO  AccountService:61 - Successful deposit to account.
+2020-08-21 16:34:34 INFO  AccountService:51 - Successful withdraw from account.
+2020-08-21 16:34:34 INFO  AccountService:68 - Failed to deposit to account.
+2020-08-21 16:34:34 INFO  AccountService:81 - Failed to transfer funds.
+2020-08-21 16:34:34 INFO  AccountService:51 - Successful withdraw from account.
+2020-08-21 16:34:34 INFO  AccountService:65 - Successful deposit to account.
+2020-08-21 16:34:34 INFO  AccountService:78 - Successful transfer of funds.
+2020-08-21 16:34:34 INFO  AccountService:54 - Failed to withdraw from account.
+2020-08-21 16:34:34 INFO  AccountService:81 - Failed to transfer funds.
+2020-08-21 16:34:34 INFO  AccountService:65 - Successful deposit to account.
+2020-08-21 16:39:52 INFO  AccountService:55 - Successful withdraw from account.
+2020-08-21 16:39:52 INFO  AccountService:72 - Failed to deposit to account.
+2020-08-21 16:39:52 INFO  AccountService:85 - Failed to transfer funds.
+2020-08-21 16:39:52 INFO  AccountService:55 - Successful withdraw from account.
+2020-08-21 16:39:52 INFO  AccountService:69 - Successful deposit to account.
+2020-08-21 16:39:52 INFO  AccountService:82 - Successful transfer of funds.
+2020-08-21 16:39:52 INFO  AccountService:58 - Failed to withdraw from account.
+2020-08-21 16:39:52 INFO  AccountService:85 - Failed to transfer funds.
+2020-08-21 16:39:52 INFO  AccountService:69 - Successful deposit to account.
+2020-08-21 16:40:31 INFO  AccountService:55 - Successful withdraw from account.
+2020-08-21 16:40:31 INFO  AccountService:72 - Failed to deposit to account.
+2020-08-21 16:40:31 INFO  AccountService:85 - Failed to transfer funds.
+2020-08-21 16:40:31 INFO  AccountService:55 - Successful withdraw from account.
+2020-08-21 16:40:31 INFO  AccountService:69 - Successful deposit to account.
+2020-08-21 16:40:31 INFO  AccountService:82 - Successful transfer of funds.
+2020-08-21 16:40:31 INFO  AccountService:58 - Failed to withdraw from account.
+2020-08-21 16:40:31 INFO  AccountService:85 - Failed to transfer funds.
+2020-08-21 16:40:31 INFO  AccountService:69 - Successful deposit to account.
+2020-08-21 16:44:15 INFO  AccountService:55 - Successful withdraw from account.
+2020-08-21 16:44:15 INFO  AccountService:72 - Failed to deposit to account.
+2020-08-21 16:44:15 INFO  AccountService:85 - Failed to transfer funds.
+2020-08-21 16:44:15 INFO  AccountService:55 - Successful withdraw from account.
+2020-08-21 16:44:15 INFO  AccountService:69 - Successful deposit to account.
+2020-08-21 16:44:15 INFO  AccountService:82 - Successful transfer of funds.
+2020-08-21 16:44:15 INFO  AccountService:58 - Failed to withdraw from account.
+2020-08-21 16:44:15 INFO  AccountService:85 - Failed to transfer funds.
+2020-08-21 16:44:15 INFO  AccountService:69 - Successful deposit to account.
+2020-08-21 16:44:36 INFO  AccountService:55 - Successful withdraw from account.
+2020-08-21 16:44:36 INFO  AccountService:72 - Failed to deposit to account.
+2020-08-21 16:44:36 INFO  AccountService:85 - Failed to transfer funds.
+2020-08-21 16:44:36 INFO  AccountService:55 - Successful withdraw from account.
+2020-08-21 16:44:36 INFO  AccountService:69 - Successful deposit to account.
+2020-08-21 16:44:36 INFO  AccountService:82 - Successful transfer of funds.
+2020-08-21 16:44:36 INFO  AccountService:58 - Failed to withdraw from account.
+2020-08-21 16:44:36 INFO  AccountService:85 - Failed to transfer funds.
+2020-08-21 16:44:36 INFO  AccountService:69 - Successful deposit to account.
+2020-08-21 18:00:12 INFO  AccountService:57 - Successful withdraw from account.
+2020-08-21 18:00:12 INFO  AccountService:74 - Failed to deposit to account.
+2020-08-21 18:00:12 INFO  AccountService:87 - Failed to transfer funds.
+2020-08-21 18:00:12 INFO  AccountService:57 - Successful withdraw from account.
+2020-08-21 18:00:12 INFO  AccountService:71 - Successful deposit to account.
+2020-08-21 18:00:12 INFO  AccountService:84 - Successful transfer of funds.
+2020-08-21 18:00:12 INFO  AccountService:60 - Failed to withdraw from account.
+2020-08-21 18:00:12 INFO  AccountService:87 - Failed to transfer funds.
+2020-08-21 18:00:12 INFO  AccountService:71 - Successful deposit to account.
+2020-08-21 18:07:17 INFO  AccountService:57 - Successful withdraw from account.
+2020-08-21 18:07:17 INFO  AccountService:74 - Failed to deposit to account.
+2020-08-21 18:07:17 INFO  AccountService:87 - Failed to transfer funds.
+2020-08-21 18:07:17 INFO  AccountService:57 - Successful withdraw from account.
+2020-08-21 18:07:17 INFO  AccountService:71 - Successful deposit to account.
+2020-08-21 18:07:17 INFO  AccountService:84 - Successful transfer of funds.
+2020-08-21 18:07:17 INFO  AccountService:60 - Failed to withdraw from account.
+2020-08-21 18:07:17 INFO  AccountService:87 - Failed to transfer funds.
+2020-08-21 18:07:17 INFO  AccountService:71 - Successful deposit to account.
+2020-08-21 20:04:07 INFO  AccountService:35 - Failed to open new account.
+2020-08-21 20:22:42 INFO  ApplicationService:69 - Failed to submit application.
+2020-08-21 20:23:24 INFO  ApplicationService:69 - Failed to submit application.
+2020-08-21 20:26:49 INFO  ApplicationService:69 - Failed to submit application.
+2020-08-21 20:28:16 INFO  ApplicationService:69 - Failed to submit application.
+2020-08-21 20:32:45 INFO  ApplicationService:69 - Failed to submit application.
+2020-08-21 20:34:24 INFO  ApplicationService:69 - Failed to submit application.
+2020-08-21 20:35:25 INFO  ApplicationService:69 - Failed to submit application.

@@ -126,13 +126,16 @@ public class BankDriver {
 	private static void roleSwitch(User u) {
 		switch (u.getRole()) {
 		case Customer:
-			
+			CustomerMenu customerMenu = new CustomerMenu(u);
+			customerMenu.home();
 			break;
 		case Employee:
-			
+			EmployeeMenu employeeMenu = new EmployeeMenu(u);
+			employeeMenu.home();
 			break;
 		case Admin:
-			
+			AdminMenu adminMenu = new AdminMenu(u);
+			adminMenu.home();
 			break;
 		default:
 			break;
