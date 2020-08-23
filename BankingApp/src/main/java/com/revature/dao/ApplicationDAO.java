@@ -8,12 +8,16 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.revature.models.Application;
 import com.revature.models.User;
+import com.revature.services.UserService;
 import com.revature.utilities.ConnectionUtilities;
 
 public class ApplicationDAO implements IApplicationDAO {
 
+	private static Logger log = Logger.getLogger(ApplicationDAO.class);
 	private IUserDAO userDAO = new UserDAO();
 	
 	@Override
@@ -50,7 +54,7 @@ public class ApplicationDAO implements IApplicationDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO RETRIEVE ALL APPLICATIONS");
+			log.info("Failed to retrieve all applications.");
 			return null;
 		}
 		
@@ -80,7 +84,7 @@ public class ApplicationDAO implements IApplicationDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO RETRIEVE APPLICATION");
+			log.info("Failed to retrieve application.");
 			return null;
 		}
 		
@@ -103,12 +107,13 @@ public class ApplicationDAO implements IApplicationDAO {
 				
 				int id = rs.getInt(1);
 				
+				log.info("Successfully submitted an application.");
 				return id;
 			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO INSERT APPLICATION");
+			log.info("Failed to submit application.");
 		}
 	
 		return 0; // Invalid primary key
@@ -118,7 +123,7 @@ public class ApplicationDAO implements IApplicationDAO {
 	public boolean update(Application a) {
 		try (Connection conn = ConnectionUtilities.getConnection()) {
 			
-			String sql = "UPDATE project0.applications SET owner = ?, active = ? WHERE project0.application.id = ?";
+			String sql = "UPDATE project0.applications SET owner = ?, active = ? WHERE project0.applications.id = ?";
 			
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			
@@ -126,13 +131,14 @@ public class ApplicationDAO implements IApplicationDAO {
 			stmt.setBoolean(2, a.isActive());
 			stmt.setInt(3, a.getId());
 			
-			if (stmt.executeUpdate(sql) != 0) {
+			if (stmt.executeUpdate() != 0) {
+				log.info("Successfully updated an application.");
 				return true;
 			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO UPDATE APPLICATION");
+			log.info("Failed to update application.");
 		}
 		return false;
 	}
@@ -141,19 +147,20 @@ public class ApplicationDAO implements IApplicationDAO {
 	public boolean delete(int id) {
 		try (Connection conn = ConnectionUtilities.getConnection()) {
 			
-			String sql = "DELETE project0.applications WHERE project0.applications.id = ?";
+			String sql = "DELETE FROM project0.applications WHERE project0.applications.id = ?";
 			
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			
 			stmt.setInt(1, id);
 			
-			if (stmt.executeUpdate(sql) != 0) {
+			if (stmt.executeUpdate() != 0) {
+				log.info("Successfully deleted an application.");
 				return true;
 			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO DELETE APPLICATION");
+			log.info("Failed to delete application.");
 		}
 		return false;
 	}

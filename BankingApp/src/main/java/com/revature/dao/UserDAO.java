@@ -9,11 +9,15 @@ import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.revature.models.Role;
 import com.revature.models.User;
+import com.revature.services.UserService;
 import com.revature.utilities.ConnectionUtilities;
 
 public class UserDAO implements IUserDAO {
+	private static Logger log = Logger.getLogger(UserDAO.class);
 
 	// We will follow a Data Access Object Design Pattern
 	// This class will have instance methods whose responsibility is to 
@@ -55,7 +59,7 @@ public class UserDAO implements IUserDAO {
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO RETRIEVE ALL USERS");
+			log.info("Failed to retrieve all users");
 			return null;
 		}
 		
@@ -89,7 +93,7 @@ public class UserDAO implements IUserDAO {
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO RETRIEVE USER");
+			log.info("Failed to retrieve user.");
 			return null;
 		}
 		
@@ -117,12 +121,13 @@ public class UserDAO implements IUserDAO {
 				
 				int id = rs.getInt(1);
 				
+				log.info("Successfully created a user.");
 				return id;
 			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO INSERT USER");
+			log.info("Failed to create new user.");
 		}
 		return 0;	// invalid primary key
 		
@@ -143,13 +148,14 @@ public class UserDAO implements IUserDAO {
 			stmt.setObject(5, u.getRole(), Types.OTHER);
 			stmt.setInt(6, u.getId());
 			
-			if (stmt.executeUpdate(sql) != 0) {
+			if (stmt.executeUpdate() != 0) {
+				log.info("Successfully updated a user.");
 				return true;
 			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO UPDATE USER");
+			log.info("Failed to update user.");
 		}
 		return false;
 	}
@@ -164,13 +170,14 @@ public class UserDAO implements IUserDAO {
 			
 			stmt.setInt(1, userId);
 			
-			if (stmt.executeUpdate(sql) != 0) {
+			if (stmt.executeUpdate() != 0) {
+				log.info("Successfully deleted a user.");
 				return true;
 			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO DELETE USER");
+			log.info("Failed to delete user.");
 		}
 		return false;
 	}
@@ -202,7 +209,7 @@ public class UserDAO implements IUserDAO {
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO RETRIEVE USER");
+			log.info("Failed to retrieve user.");
 			return null;
 		}
 		

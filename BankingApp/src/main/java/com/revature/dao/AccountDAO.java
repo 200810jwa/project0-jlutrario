@@ -8,12 +8,16 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.revature.models.Account;
 import com.revature.models.User;
+import com.revature.services.UserService;
 import com.revature.utilities.ConnectionUtilities;
 
 public class AccountDAO implements IAccountDAO {
 
+	private static Logger log = Logger.getLogger(AccountDAO.class);
 	private IUserDAO userDAO = new UserDAO();
 
 	@Override
@@ -50,7 +54,7 @@ public class AccountDAO implements IAccountDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO RETRIEVE ALL ACCOUNTS");
+			log.info("Failed to retrieve all accounts.");
 			return null;
 		}
 		
@@ -80,7 +84,7 @@ public class AccountDAO implements IAccountDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO RETRIEVE ACCOUNT");
+			log.info("Failed to retrieve account.");
 			return null;
 		}
 		
@@ -104,12 +108,13 @@ public class AccountDAO implements IAccountDAO {
 				
 				int id = rs.getInt(1);
 				
+				log.info("Successfully opened an account.");
 				return id;
 			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("WE FAILED TO INSERT ACCOUNT");
+			log.info("Failed to open account.");
 		}
 	
 		return 0; // Invalid primary key
@@ -127,13 +132,14 @@ public class AccountDAO implements IAccountDAO {
 			stmt.setInt(2, a.getOwner().getId());
 			stmt.setInt(3, a.getId());
 			
-			if (stmt.executeUpdate(sql) != 0) {
+			if (stmt.executeUpdate() != 0) {
+				log.info("Successfully updated an account.");
 				return true;
 			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO UPDATE USER");
+			log.info("Failed to update user.");
 		}
 		return false;
 	}
@@ -142,19 +148,20 @@ public class AccountDAO implements IAccountDAO {
 	public boolean delete(int id) {
 		try (Connection conn = ConnectionUtilities.getConnection()) {
 			
-			String sql = "DELETE project0.accounts WHERE project0.accounts.id = ?";
+			String sql = "DELETE FROM project0.accounts WHERE project0.accounts.id = ?";
 			
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			
 			stmt.setInt(1, id);
 			
-			if (stmt.executeUpdate(sql) != 0) {
+			if (stmt.executeUpdate() != 0) {
+				log.info("Successfully deleted an account.");
 				return true;
 			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("FAILED TO DELETE USER");
+			log.info("Failed to delete user.");
 		}
 		return false;
 	}
