@@ -303,3 +303,18 @@
 2020-08-21 20:32:45 INFO  ApplicationService:69 - Failed to submit application.
 2020-08-21 20:34:24 INFO  ApplicationService:69 - Failed to submit application.
 2020-08-21 20:35:25 INFO  ApplicationService:69 - Failed to submit application.
+2020-08-22 21:37:10 INFO  AccountService:55 - Successful withdraw from account.
+2020-08-22 21:37:10 INFO  AccountService:72 - Failed to deposit to account.
+2020-08-22 21:37:10 INFO  AccountService:85 - Failed to transfer funds.
+2020-08-22 21:37:10 INFO  AccountService:55 - Successful withdraw from account.
+2020-08-22 21:37:10 INFO  AccountService:69 - Successful deposit to account.
+2020-08-22 21:37:10 INFO  AccountService:82 - Successful transfer of funds.
+2020-08-22 21:37:10 INFO  AccountService:58 - Failed to withdraw from account.
+2020-08-22 21:37:10 INFO  AccountService:85 - Failed to transfer funds.
+2020-08-22 21:37:10 INFO  AccountService:69 - Successful deposit to account.
+2020-08-22 23:18:48 INFO  BankDriver:16 - Application has started.
+2020-08-22 23:19:25 INFO  ApplicationService:69 - Failed to submit application.
+2020-08-22 23:26:48 INFO  BankDriver:16 - Application has started.
+2020-08-22 23:36:40 INFO  BankDriver:16 - Application has started.
+2020-08-22 23:38:11 INFO  BankDriver:16 - Application has started.
+2020-08-22 23:48:48 INFO  BankDriver:16 - Application has started.
