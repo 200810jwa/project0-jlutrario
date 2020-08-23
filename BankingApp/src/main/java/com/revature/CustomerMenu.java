@@ -14,6 +14,7 @@ import com.revature.services.UserService;
 public class CustomerMenu {
 
 	private User u;
+	private Scanner scan = new Scanner(System.in);
 
 	public CustomerMenu(User u) {
 		super();
@@ -21,11 +22,12 @@ public class CustomerMenu {
 	}
 
 	public void home() {
-		Scanner scan = new Scanner(System.in);
 		boolean menu = true;
 		
 		while(menu) {
 			System.out.println("|------------- CUSTOMER MENU -------------|");
+			System.out.println("| Hi, " + u.getFirstname() + "!");
+			System.out.println("|                                         |");
 			System.out.println("| [1] View Account                        |");
 			System.out.println("| [2] Change Password                     |");
 			System.out.println("| [3] Logout                              |");
@@ -34,27 +36,29 @@ public class CustomerMenu {
 			System.out.println("|                                         |");
 			
 			switch(action) {
+			
 			case "1":
 				accountMenu();
 				break;
+			
 			case "2":
 				editMenu();
 				break;
+			
 			case "3":
 				System.out.println("|-------------- LOGGING OUT --------------|");
 				System.out.println("|                                         |");
 				menu = false;
 				break;
+			
 			default:
 				System.out.println("|------------- NOT AN OPTION -------------|");
 				System.out.println("|                                         |");
 			}
 		}
-		scan.close();
 	}
 
 	private void accountMenu() {
-		Scanner scan = new Scanner(System.in);
 		AccountService accountService = new AccountService();
 		ApplicationService appService = new ApplicationService();
 		
@@ -62,9 +66,11 @@ public class CustomerMenu {
 		Application app = appService.findApplication(u);
 		System.out.println("|---------------- ACCOUNT ----------------|");
 		System.out.println("|                                         |");
+		
 		if (a == null) {
 			System.out.println("| No account was found.                   |");
 			System.out.println("|                                         |");
+			
 			if (app == null) {
 				System.out.println("| Want to apply for a new account?        |");
 				System.out.println("| [1] Yes                                 |");
@@ -73,29 +79,37 @@ public class CustomerMenu {
 				String option = scan.nextLine();
 				
 				switch (option) {
+				
 				case "1":
+					
 					if (appService.apply(u) != null) {
 						System.out.println("|--------- APPLICATION SUBMITTED ---------|");
 						System.out.println("|                                         |");
+					
 					} else {
 						System.out.println("|----- APPLICATION SUBMISSION FAILED -----|");
 						System.out.println("|------------ TRY AGAIN LATER ------------|");
 						System.out.println("|                                         |");
 					}
 					break;
+				
 				case "2":
 					break;
+				
 				default:
 					System.out.println("|------------- NOT AN OPTION -------------|");
 					System.out.println("|------------ TRY AGAIN LATER ------------|");
 					System.out.println("|                                         |");
 				}
+				
 			} else {	// application found
 				System.out.println("| Application Status:                     |");
 				System.out.println("| id: " + app.getId());
+				
 				if (app.isActive()) {
 					System.out.println("| status: PENDING APPROVAL                |");
 					System.out.println("|                                         |");
+				
 				} else {
 					System.out.println("| status: DENIED                          |");
 					System.out.println("|                                         |");
@@ -106,6 +120,7 @@ public class CustomerMenu {
 					String option = scan.nextLine();
 					
 					switch (option) {
+					
 					case "1":
 						if (appService.removeApplication(app)) {
 							System.out.println("|---------- APPLICATION REMOVED ----------|");
@@ -115,41 +130,48 @@ public class CustomerMenu {
 							System.out.println("|                                         |");
 						}
 						break;
+					
 					case "2":
 						break;
+					
 					default:
 						System.out.println("|------------- NOT AN OPTION -------------|");
 						System.out.println("|                                         |");
 					}
 				}
 			}
+		
 		} else {	// account found
 			transactionMenu(a);
 		}
 		
-		scan.close();
 	}
 
 	private void editMenu() {
-		Scanner scan = new Scanner(System.in);
 		UserService userService = new UserService();
 		
 		int attempt = 0;
 		while (attempt < 3) {
+			
 			System.out.println("|------------ CHANGE PASSWORD ------------|");
 			System.out.println("|                                         |");
 			System.out.print  ("| Enter Current Password: ");
 			String curr_pass = scan.nextLine();
 			attempt++;
+			
 			if (u.getPassword().equals(curr_pass)) {
 				System.out.print  ("| Enter New Password: ");
 				String new_pass = scan.nextLine();
+				
 				userService.changePassword(u.getId(), new_pass);
 				System.out.println("|----- PASSWORD SUCCESSFULLY CHANGED -----|");
 				System.out.println("|                                         |");
+				
 				attempt = 5;
+			
 			} else {
 				System.out.println("|----------- INVALID PASSWORD ------------|");
+				
 				if (attempt < 2) {
 					System.out.println("|--------------- TRY AGAIN ---------------|");
 					System.out.println("|                                         |");
@@ -157,24 +179,23 @@ public class CustomerMenu {
 				attempt++;
 			}
 		}
+		
 		if (attempt == 3) {
 			System.out.println("|----------- TOO MANY ATTEMPTS -----------|");
 			System.out.println("|------------ TRY AGAIN LATER ------------|");
 			System.out.println("|                                         |");
 		}
 		
-		scan.close();
 	}
 	
 	private void transactionMenu(Account a) {
-		Scanner scan = new Scanner(System.in);
 		AccountService accountService = new AccountService();
 		IUserDAO userDAO = new UserDAO();
 		
 		System.out.println("|                                         |");
-		System.out.print  ("| id: " + a.getId());
-		System.out.print  ("| balance: $" + a.getBalance());
-		System.out.print  ("| owner: " + a.getOwner().getFirstname() + " " + a.getOwner().getLastname());
+		System.out.println("| id: " + a.getId());
+		System.out.println("| balance: $" + a.getBalance());
+		System.out.println("| owner: " + a.getOwner().getFirstname() + " " + a.getOwner().getLastname());
 		System.out.println("|   [1] Withdraw                          |");
 		System.out.println("|   [2] Deposit                           |");
 		System.out.println("|   [3] Transfer                          |");
@@ -182,13 +203,15 @@ public class CustomerMenu {
 		System.out.println("|   [5] Back                              |");
 		System.out.print  ("|   Choose an action: ");
 		String action = scan.nextLine();
+		System.out.println("|                                         |");
 		
 		switch (action) {
+		
 		case "1":
 			System.out.println("|--------------- WITHDRAW ----------------|");
 			System.out.println("|                                         |");
-			System.out.print  ("| current balance: $" + a.getBalance());
-			System.out.println("| Enter withdraw amount: ");
+			System.out.println("| current balance: $" + a.getBalance());
+			System.out.print  ("| Enter withdraw amount: ");
 			double wAmount = Double.parseDouble(scan.nextLine());
 			if (accountService.withdraw(a, wAmount)) {
 				System.out.println("|--------- WITHDRAW SUCCESSFUL! ----------|");
@@ -198,11 +221,12 @@ public class CustomerMenu {
 				System.out.println("|                                         |");
 			}
 			break;
+		
 		case "2":
 			System.out.println("|---------------- DEPOSIT ----------------|");
 			System.out.println("|                                         |");
-			System.out.print  ("| current balance: $" + a.getBalance());
-			System.out.println("| Enter deposit amount: ");
+			System.out.println("| current balance: $" + a.getBalance());
+			System.out.print  ("| Enter deposit amount: ");
 			double dAmount = Double.parseDouble(scan.nextLine());
 			System.out.println("|                                         |");
 			
@@ -214,13 +238,14 @@ public class CustomerMenu {
 				System.out.println("|                                         |");
 			}
 			break;
+		
 		case "3":
 			System.out.println("|---------------- TRANSFER ---------------|");
 			System.out.println("|                                         |");
-			System.out.print  ("| current balance: $" + a.getBalance());
-			System.out.println("| Enter amount to transfer: ");
+			System.out.println("| current balance: $" + a.getBalance());
+			System.out.print  ("| Enter amount to transfer: ");
 			double tAmount = Double.parseDouble(scan.nextLine());
-			System.out.println("| Enter target's username: ");
+			System.out.print  ("| Enter target's username: ");
 			String username = scan.nextLine();
 			User targetUser = userDAO.findByUsername(username);
 			if (targetUser != null) {
@@ -242,6 +267,7 @@ public class CustomerMenu {
 				System.out.println("|                                         |");
 			}
 			break;
+		
 		case "4":
 			System.out.println("|------------- CLOSE ACCOUNT -------------|");
 			System.out.println("|                                         |");
@@ -252,13 +278,15 @@ public class CustomerMenu {
 			String choice = scan.nextLine();
 			
 			switch (choice) {
+			
 			case "1":
 				System.out.print  ("| Enter password: ");
-				System.out.println("|                                         |");
 				String pw = scan.nextLine();
+				System.out.println("|                                         |");
+				
 				if (u.getPassword().equals(pw)) {
 					if (a.getBalance() != 0) {
-						System.out.println("|--------- ACCOUNT MUST BE EMPTY ---------|");
+						System.out.println("|-------- MUST EMPTY ACCOUNT FIRST -------|");
 						System.out.println("|                                         |");
 					} else if (accountService.closeAccount(a)) {
 						System.out.println("|------ ACCOUNT SUCCESSFULLY CLOSED ------|");
@@ -272,20 +300,23 @@ public class CustomerMenu {
 					System.out.println("|                                         |");
 				}
 				break;
+			
 			case "2":
 				break;
+			
 			default:
 				System.out.println("|------------- NOT AN OPTION -------------|");
 				System.out.println("|                                         |");
 			}
 			break;
+		
 		case "5":
 			break;
+		
 		default:
 			System.out.println("|------------- NOT AN OPTION -------------|");
 			System.out.println("|                                         |");
 		}
 		
-		scan.close();
 	}
 }

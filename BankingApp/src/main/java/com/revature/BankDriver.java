@@ -3,6 +3,8 @@ package com.revature;
 import java.util.Scanner;
 import org.apache.log4j.Logger;
 
+import com.revature.dao.IUserDAO;
+import com.revature.dao.UserDAO;
 import com.revature.models.Role;
 import com.revature.models.User;
 import com.revature.services.UserService;
@@ -10,13 +12,13 @@ import com.revature.services.UserService;
 public class BankDriver {
 
 	private static Logger log = Logger.getLogger(BankDriver.class);
+	private static Scanner scan = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		
 		log.info("Application has started.");
 		System.out.println("\n=========== WELCOME TO THE BANK ===========");
 		System.out.println("|                                         |");
-		Scanner scan = new Scanner(System.in);
 		boolean menu = true;
 		
 		while (menu) {
@@ -42,17 +44,12 @@ public class BankDriver {
 				System.out.println("|                                         |");
 			}
 		}
-		System.out.println("|                                         |");
 		System.out.println("|================ GOODBYE ================|");
-		
-		scan.close();
 		
 		log.info("Application has ended.");
 	}
 
 	private static void loginMenu() {
-		Scanner scan = new Scanner(System.in);
-		
 		UserService userService = new UserService();
 		
 		int attempt = 0;
@@ -88,55 +85,57 @@ public class BankDriver {
 			System.out.println("|                                         |");
 		}
 		
-		scan.close();
 	}
 
-	private static void registerMenu() {
-		Scanner scan = new Scanner(System.in);
-		
+	private static void registerMenu() {		
 		UserService userService = new UserService();
+		IUserDAO userDAO = new UserDAO();
 		
 		System.out.println("|--------------- REGISTER ----------------|");
 		System.out.println("|                                         |");
 		System.out.print  ("| Create Username: ");
 		String username = scan.nextLine();
-		System.out.print  ("| Create Password: ");
-		String password = scan.nextLine();
-		System.out.print  ("| Enter First Name: ");
-		String firstname = scan.nextLine();
-		System.out.print  ("| Enter Last Name: ");
-		String lastname = scan.nextLine();
-		System.out.println("|                                         |");
-		
-		User u = userService.register(username, password, firstname, lastname, Role.Customer);
-		
-		if (u == null) {
-			System.out.println("|------------ USERNAME TAKEN -------------|");
-			System.out.println("|---------- LOG IN OR TRY AGAIN ----------|");
+		if (userDAO.findByUsername(username) == null) {
+			System.out.print  ("| Create Password: ");
+			String password = scan.nextLine();
+			System.out.print  ("| Enter First Name: ");
+			String firstname = scan.nextLine();
+			System.out.print  ("| Enter Last Name: ");
+			String lastname = scan.nextLine();
 			System.out.println("|                                         |");
-		} else {
+			
+			User u = userService.register(username, password, firstname, lastname, Role.Customer);
+			
 			System.out.println("|-------- REGISRATION SUCCESSFUL! --------|");
 			System.out.println("|                                         |");
 			roleSwitch(u);
+		} else {
+			System.out.println("|                                         |");
+			System.out.println("|------------ USERNAME TAKEN -------------|");
+			System.out.println("|---------- LOG IN OR TRY AGAIN ----------|");
+			System.out.println("|                                         |");
 		}
 		
-		scan.close();
 	}
 	
 	private static void roleSwitch(User u) {
 		switch (u.getRole()) {
+		
 		case Customer:
 			CustomerMenu customerMenu = new CustomerMenu(u);
 			customerMenu.home();
 			break;
+		
 		case Employee:
 			EmployeeMenu employeeMenu = new EmployeeMenu(u);
 			employeeMenu.home();
 			break;
+		
 		case Admin:
 			AdminMenu adminMenu = new AdminMenu(u);
 			adminMenu.home();
 			break;
+		
 		default:
 			break;
 		}
