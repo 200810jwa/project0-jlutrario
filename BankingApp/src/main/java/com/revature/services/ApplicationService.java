@@ -73,4 +73,8 @@ public class ApplicationService {
 		
 		return a;
 	}
+	
+	public boolean removeApplication(Application app) {
+		return applicationDAO.delete(app.getId());
+	}
 }

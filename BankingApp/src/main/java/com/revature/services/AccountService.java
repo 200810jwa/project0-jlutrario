@@ -77,7 +77,7 @@ public class AccountService {
 	public boolean transfer(Account source, Account target, double amount) {
 		if (amount > 0 && source.getBalance()-amount >= 0) {
 			withdraw(source, amount);
-			deposit(source, amount);
+			deposit(target, amount);
 			
 			log.info("Successful transfer of funds.");
 			return true;
